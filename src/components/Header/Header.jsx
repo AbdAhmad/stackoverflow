@@ -4,13 +4,14 @@ import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
 import styles from "./header.module.scss";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <header className={clsx("flex", styles.main)}>
       <div className="flex">
         <Image
-          src={"/Header/stack-overflow.svg"}
+          src={"/stack-overflow.svg"}
           width={50}
           height={20}
           title="Stack Overlfow"
@@ -20,12 +21,18 @@ const Header = () => {
           stack <span>overflow</span>
         </h4>
       </div>
-      <form className="flex">
+      <form className="flex grow-[1]">
         <div className="flex">
           <FontAwesomeIcon icon={faMagnifyingGlass} />
           <input type="text" />
         </div>
       </form>
+      <Link href={"/login"}>
+        <button>Log in</button>
+      </Link>
+      <Link href={"/signup"}>
+        <button>Sign up</button>
+      </Link>
     </header>
   );
 };
