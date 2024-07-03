@@ -12,7 +12,7 @@ const Questions = () => {
         <h1>Top Questions</h1>
         <button
           className="bg-blue-500 p-2 rounded-lg"
-          onClick={() => router.push("/ask-a-question")}
+          onClick={() => router.push("/ask-question")}
         >
           Ask a question
         </button>
