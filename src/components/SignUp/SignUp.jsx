@@ -11,36 +11,57 @@ const SignUp = () => {
   // console.log("state", state);
   return (
     <form action={dispatch} className="flex flex-col gap-3">
-      <div>
-        <label htmlFor="username">Username</label>
-        <input
-          id="username"
-          name="username"
-          type="text"
-          className="bg-slate-300 rounded"
-        />
+      <div class="grid grid-cols-12 gap-4 items-center">
+        <div class="col-span-4">
+          <label htmlFor="username">Username</label>
+        </div>
+        <div class="col-span-8">
+          <input
+            id="username"
+            name="username"
+            type="text"
+            className="bg-slate-300 rounded-full w-full px-2 py-3 outline-none"
+          />
+        </div>
       </div>
-      <div>
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          className="bg-slate-300 rounded"
-        />
+      <div class="grid grid-cols-12 gap-4 items-center">
+        <div class="col-span-4">
+          <label htmlFor="password">Password</label>
+        </div>
+        <div class="col-span-8">
+          <input
+            id="password"
+            name="password"
+            type="password"
+            className="bg-slate-300 rounded-full w-full px-2 py-3 outline-none"
+          />
+        </div>
       </div>
-      <div>
-        <label htmlFor="confirmPassword">Confirm password</label>
-        <input
-          id="confirmPassword"
-          name="confirmPassword"
-          type="password"
-          className="bg-slate-300 rounded"
-        />
+      <div class="grid grid-cols-12 gap-4 items-center">
+        <div class="col-span-4">
+          <label htmlFor="confirmPassword">Confirm password</label>
+        </div>
+        <div class="col-span-8">
+          <input
+            id="confirmPassword"
+            name="confirmPassword"
+            type="password"
+            className="bg-slate-300 rounded-full w-full px-2 py-3 outline-none"
+          />
+        </div>
       </div>
-      <button type="submit">Sign up</button>
-      <p>
-        Already have an account? <Link href={"/login"}>Log in</Link>
+
+      <button
+        type="submit"
+        className="rounded-full bg-blue-300 py-3 text-white"
+      >
+        Sign up
+      </button>
+      <p className="text-center text-sm">
+        Already have an account?{" "}
+        <Link href={"/login"} className="text-sky-700">
+          Log in
+        </Link>
       </p>
     </form>
   );
